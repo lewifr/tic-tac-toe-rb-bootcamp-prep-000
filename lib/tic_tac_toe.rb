@@ -105,9 +105,12 @@ def winner(board)
 end
 
 def play(board)
-  turn_number = 0
-  while turn_number < 9
+  until over?(board)
     turn(board)
-    turn_number += 1
+  end
+  if won?(board)
+    puts "Congratulations #{current_player(board)} !!!"
+  elsif draw?(board)
+    puts "It was a draw"
   end
 end
