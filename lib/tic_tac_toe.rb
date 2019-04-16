@@ -46,7 +46,7 @@ def turn(board)
       break
     end
   end
-  move(board, entry)
+  move(board, entry, current_player(board))
   display_board(board)
 end
 
